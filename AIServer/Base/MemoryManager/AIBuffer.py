@@ -1,6 +1,4 @@
-import AIModuleTypes
-
-class AIModuleManagers:
+class AIBuffer(object):
     m_Instance = None
     def __new__(CurrentClass):
         if not CurrentClass.m_Instance:
@@ -14,4 +12,7 @@ class AIModuleManagers:
         print("Class %s Init End" %Self.__class__)
 
     def __del__(Self):
+        print()
+
+    def GetSize(Self):
         print()

@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Application\AIServer.py" />
+    <Compile Include="Base\MemoryManager\AIBuffer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Base\ThreadPool\AIThread.py">
       <SubType>Code</SubType>
     </Compile>
@@ -29,6 +32,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Module\DataCleaningBase\DataCleaningBase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\DataCleaningTypes.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Module\FunctionProfile\FunctionProfile.py">
@@ -43,25 +49,36 @@
     <Compile Include="Module\PerfAnalyzer\AIPerfAnalyzer.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Network\CSNetwork\AICSNetwork.py">
+    <Compile Include="Base\Network\CSNetwork\AICSNetwork.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Network\NetworkBase\AINetworkBase.py">
+    <Compile Include="Base\Network\NetworkBase\AINetworkBase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\Network\NetworkBase\AISocketStream.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\Network\NetworkMiddleware\AINetworkClient.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\Network\NetworkMiddleware\AINetworkServer.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
+    <Folder Include="Base\MemoryManager\" />
     <Folder Include="Base\ThreadPool\" />
     <Folder Include="ModuleManagers\" />
     <Folder Include="Module\FunctionProfile\" />
     <Folder Include="Module\DataCleaningBase\" />
     <Folder Include="Module\PerfAnalyzer\" />
-    <Folder Include="Network\" />
+    <Folder Include="Base\Network\" />
     <Folder Include="Module\" />
-    <Folder Include="Network\CSNetwork\" />
-    <Folder Include="Network\NetworkBase\" />
+    <Folder Include="Base\Network\CSNetwork\" />
+    <Folder Include="Base\Network\NetworkBase\" />
     <Folder Include="Base\" />
+    <Folder Include="Base\Network\NetworkMiddleware\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

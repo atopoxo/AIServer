@@ -1,4 +1,5 @@
 import DataCleaningBase
+import DataCleaningTypes
 
 class FunctionProfile(DataCleaningBase):
     m_Instance = None
@@ -13,7 +14,7 @@ class FunctionProfile(DataCleaningBase):
         print("Class %s Init Begin" %Self.__class__)
         print("Class %s Init End" %Self.__class__)
 
-    def Update(Self):
+    def Update(Self, ):
         print("AIPerfAnalyzer Update")
 
 
